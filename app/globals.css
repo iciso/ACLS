@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+}
+
+/* Ensure text wraps properly on all elements */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+div,
+button {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-word;
+  word-break: break-word;
+  hyphens: auto;
+}
+
+/* Ensure buttons don't overflow on mobile */
+button {
+  max-width: 100%;
+}
+
+/* Ensure images are responsive */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 640px) {
+  /* Ensure text has proper contrast on mobile */
+  .text-white,
+  button,
+  .text-gray-100,
+  .text-gray-200,
+  .text-gray-300 {
+    color: #1a202c !important; /* Dark gray for better contrast */
+  }
+
+  /* Ensure buttons have visible text and borders */
+  button {
+    background-color: white !important;
+    border: 1px solid #cbd5e0 !important;
+    color: #1a202c !important;
+  }
+
+  /* Exception for primary buttons */
+  button.bg-blue-600,
+  button.bg-blue-700 {
+    background-color: #3182ce !important;
+    color: white !important;
+  }
+
+  /* Exception for destructive buttons */
+  button.bg-red-600,
+  button.bg-red-700 {
+    background-color: #e53e3e !important;
+    color: white !important;
+  }
+
+  /* Ensure card backgrounds are white */
+  .bg-white,
+  .card,
+  .card-content {
+    background-color: white !important;
+  }
+
+  /* Ensure alert text is visible */
+  .alert-title,
+  .alert-description {
+    color: #1a202c !important;
+  }
+}
