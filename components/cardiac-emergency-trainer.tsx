@@ -598,7 +598,15 @@ export default function CardiacEmergencyTrainer() {
         <div className="border-t border-gray-200 p-4 text-center text-sm text-gray-600 bg-gray-50">
           <div className="flex items-center justify-center mb-1">
             <MessageSquare className="h-4 w-4 mr-1 text-gray-500" />
-            <span>For suggestions WhatsApp Rafique at +91 7558845528</span>
+            <span>For suggestions WhatsApp{" "} 
+             <a
+                href="https://cvemrafi.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:text-blue-800 underline"
+              >
+                 Rafique
+              </a>{" "} at +91 7558845528</span>
           </div>
           <div className="flex items-center justify-center">
             <svg viewBox="0 0 496.08 512" className="h-4 w-4 mr-1 text-gray-500">
